@@ -2,20 +2,22 @@ package Lab1;
 
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static Lab1.Main.*;
+import static org.junit.Assert.*;
+import org.junit.*;
 
 class MainTest extends Main {
 
     @Test
    public void testgreet() {
         String expectedString = "Hello, Bob";
-        assertEquals(expectedString,greet("bob"));
+        assertEquals(expectedString,(greet("bob")));
 
     }
     @Test
     public void testNull(){
         String expectedString = "Hello, my friend.";
-        assertEquals(expectedString,greet());
+        assertEquals(expectedString, greet());
     }
     @Test
     public void testshout(){
@@ -41,5 +43,6 @@ class MainTest extends Main {
         String expectedString = "Hello Sara, Kyle and Finn. AND HELLO BOBBY!";
         assertEquals(expectedString,greet(mixedNames));
     }
+
 
 }
